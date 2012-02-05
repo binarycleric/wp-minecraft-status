@@ -6,7 +6,6 @@ Description: Display your minecraft server's status on your wordpress site.
 Author: Jon Daniel
 Version: 0.1
 Author URI: http://jondaniel.net
-License: GPL2
 */
 
 define('SETTINGS_GROUP', 'minecraft-settings-group');
@@ -16,9 +15,13 @@ add_action('wp_ajax_nopriv_server_status', 'server_status_callback');
 wp_enqueue_style('minecraft-css',
                  plugins_url('stylesheets/minecraft.css', __FILE__)); 
 
+
+wp_enqueue_script('spin-js',
+                  plugins_url('javascript/spin.min.js', __FILE__));
+
 wp_enqueue_script('minecraft-js', 
                   plugins_url('javascript/minecraft.js', __FILE__),
-                  array('jquery'), 
+                  array('jquery', 'spin-js'), 
                   null, 
                   true);
 

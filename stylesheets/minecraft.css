@@ -48,3 +48,9 @@ div.mc-inner-content {
   background-size: 150px;
   background-image: url("../images/minecraft-logo.png");
 }
+
+#minecraft-server-status div.mc-loading {
+  background-image: url("../images/spinner.gif");
+  background-repeat: no-repeat;
+}
+
