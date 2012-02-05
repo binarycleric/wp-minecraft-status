@@ -1,28 +1,21 @@
 jQuery(document).ready(function() {
   jQuery('.minecraft-status').each(function(i,element) {
     var opts = {
-      lines: 12, // The number of lines to draw
-      length: 14, // The length of each line
-      width: 4, // The line thickness
-      radius: 20, // The radius of the inner circle
-      color: '#000', // #rgb or #rrggbb
-      speed: 1, // Rounds per second
-      trail: 60, // Afterglow percentage
-      shadow: false, // Whether to render a shadow
-      hwaccel: false // Whether to use hardware acceleration
-    };
+      lines: 12, length: 14, width: 4, 
+      radius: 20, color: '#000', speed: 1, 
+      trail: 60, shadow: false, hwaccel: false
+    },
+    element = jQuery(element),
+    spinner = new Spinner(opts).spin();
 
-    var spinner = new Spinner(opts).spin();
-    var element = jQuery(element);
     spinner.el.style.top = "50%";
     spinner.el.style.left = "50%";
-
     element.html(spinner.el);
 
     jQuery.post('/wp-admin/admin-ajax.php', 
       { action: 'server_status', 
-        host: element.data('host'),
-        port: element.data('port') },
+        host: element[0].dataset.host,
+        port: element[0].dataset.port},
       function(response) {
         element.html(response); 
       }
