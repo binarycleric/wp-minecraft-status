@@ -10,10 +10,8 @@ License: None yet (IE, you can't use it)
 */
 
 define('SETTINGS_GROUP', 'minecraft-settings-group');
-
-
-
 add_action('wp_ajax_server_status', 'server_status_callback');
+add_action('wp_ajax_nopriv_server_status', 'server_status_callback');
 
 wp_enqueue_script('minecraft', 
                   plugins_url('javascript/minecraft.js', __FILE__),
@@ -23,12 +21,11 @@ wp_enqueue_script('minecraft',
 
 function server_status_callback() {
   $mc_host="minecraft.pittco.org"; 
-  $mc_port=25565;
-
+  $mc_port=25566;
 
   $mc_logo = plugins_url("images/minecraft-logo.png", __FILE__);
 
-  $socket = @fsockopen($mc_host, $mc_port, $num, $error, 3);
+  $socket = @fsockopen($mc_host, $mc_port, $num, $error, 2);
 
   if($socket) {
     $color = "green";
