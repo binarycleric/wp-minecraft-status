@@ -7,6 +7,13 @@ Authors
 -------
 * [Jon Daniel](https://github.com/binarycleric)
 
+About
+------
+Add the following div to a post and the plugin takes care of the rest. 
+
+```html
+<div id="minecraft-server-status"></div>
+```
 
 Notes
 ------
