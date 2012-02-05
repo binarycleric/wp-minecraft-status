@@ -13,7 +13,10 @@ define('SETTINGS_GROUP', 'minecraft-settings-group');
 add_action('wp_ajax_server_status', 'server_status_callback');
 add_action('wp_ajax_nopriv_server_status', 'server_status_callback');
 
-wp_enqueue_script('minecraft', 
+wp_enqueue_style('minecraft-css',
+                 plugins_url('stylesheets/minecraft.css', __FILE__)); 
+
+wp_enqueue_script('minecraft-js', 
                   plugins_url('javascript/minecraft.js', __FILE__),
                   array('jquery'), 
                   null, 
@@ -21,9 +24,7 @@ wp_enqueue_script('minecraft',
 
 function server_status_callback() {
   $mc_host="minecraft.pittco.org"; 
-  $mc_port=25566;
-
-  $mc_logo = plugins_url("images/minecraft-logo.png", __FILE__);
+  $mc_port=25565;
 
   $socket = @fsockopen($mc_host, $mc_port, $num, $error, 2);
 

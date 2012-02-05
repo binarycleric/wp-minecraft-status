@@ -1,0 +1,49 @@
+#minecraft-server-status {
+  /* to force decent looking fonts */
+  color: #373737;
+  font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.625;
+  /* end font stuffs */
+  margin-bottom: 8px;
+  border: 1px solid;
+  width: 550px;
+  background-color: #D3DCD2;
+  background-repeat: no-repeat;
+  background-position: 12px 2px;
+  -moz-box-shadow:    1px 1px 2px 3px #ccc;
+  -webkit-box-shadow: 1px 1px 2px 3px #ccc;
+  box-shadow:         1px 1px 2px 3px #ccc;
+}
+
+#minecraft-server-status div.mc-inner-content {
+  padding: 1em;
+  padding-left: 10em;
+}
+
+span.mc-title {
+  font-size: 120%;
+}
+
+span.mc-value {
+  font-size: 103%;
+}
+
+span.mc-status-online {
+  color: #3F7939;
+}
+
+span.mc-status-offline {
+  color: #914448;
+}
+
+span.mc-status-online, span.mc-status-offline {
+  font-size: 118%;
+}
+
+div.mc-inner-content {
+  background-repeat: no-repeat;
+  background-position: 98% 95%;
+  background-size: 150px;
+  background-image: url("../images/minecraft-logo.png");
+}
