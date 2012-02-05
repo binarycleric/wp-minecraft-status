@@ -9,15 +9,12 @@ Author URI: http://jondaniel.net
 License: None yet (IE, you can't use it)
 */
 
-$javascript = plugins_url('javascript/minecraft.js', __FILE__);
-$jquery = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-
 define('SETTINGS_GROUP', 'minecraft-settings-group');
 
 add_action('wp_ajax_server_status', 'server_status_callback');
 
 wp_enqueue_script('minecraft', 
-                  $javascript, 
+                  plugins_url('javascript/minecraft.js', __FILE__),
                   array('jquery'), 
                   null, 
                   true);
