@@ -11,8 +11,8 @@ About
 ------
 Add the following div to a post and the plugin takes care of the rest. 
 
-```php
-echo "<div class='minecraft-status' data-host='{$host}' data-port='{$port}'></div>";
+```html
+<div class='minecraft-status' data-host='HOST' data-port='PORT'></div>
 ```
 
 Notes
