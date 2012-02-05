@@ -6,7 +6,7 @@ Description: Display your minecraft server's status on your wordpress site.
 Author: Jon Daniel
 Version: 0.1
 Author URI: http://jondaniel.net
-License: None yet (IE, you can't use it)
+License: GPL2
 */
 
 define('SETTINGS_GROUP', 'minecraft-settings-group');
