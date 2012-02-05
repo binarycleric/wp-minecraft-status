@@ -15,7 +15,6 @@ add_action('wp_ajax_nopriv_server_status', 'server_status_callback');
 wp_enqueue_style('minecraft-css',
                  plugins_url('stylesheets/minecraft.css', __FILE__)); 
 
-
 wp_enqueue_script('spin-js',
                   plugins_url('javascript/spin.min.js', __FILE__));
 
@@ -26,8 +25,8 @@ wp_enqueue_script('minecraft-js',
                   true);
 
 function server_status_callback() {
-  $mc_host=$_POST['host'];
-  $mc_port=$_POST['port'];
+  $mc_host = filter_var($_POST['host'], FILTER_SANITIZE_URL);
+  $mc_port = filter_var($_POST['port'], FILTER_SANITIZE_NUMBER_INT);
 
   $socket = @fsockopen($mc_host, $mc_port, $num, $error, 2);
 
