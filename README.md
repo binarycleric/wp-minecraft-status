@@ -19,7 +19,7 @@ Add the following div to a post and the plugin takes care of the rest.
 <div class='minecraft-status' data-host='HOST' data-port='PORT'></div>
 ```
 
-Screenshot
+Screenshots
 -------
 
 ![](http://i.imgur.com/VBekg.png)
