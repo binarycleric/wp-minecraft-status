@@ -29,15 +29,7 @@ function server_status_callback() {
   $mc_port = filter_var($_POST['port'], FILTER_SANITIZE_NUMBER_INT);
 
   $socket = @fsockopen($mc_host, $mc_port, $num, $error, 2);
-
-  if($socket) {
-    $color = "green";
-    $status = "online";
-  } else {
-    $color = "red";
-    $status = "offline";
-  }
-
+  $status = ($socket) ? "online" : "offline";
   @fclose($socket);
 
   require "partials/server-status.php";
