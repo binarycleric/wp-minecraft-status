@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Minecraft Server Status
-Plugin URI: http://github.com/binarycleric
+Plugin URI: https://github.com/binarycleric/wp-minecraft-status
 Description: Display your minecraft server's status on your wordpress site.
 Author: Jon Daniel
 Version: 0.1
