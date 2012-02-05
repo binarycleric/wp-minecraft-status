@@ -1,4 +1,4 @@
-#minecraft-server-status {
+.minecraft-status {
   /* to force decent looking fonts */
   color: #373737;
   font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,15 +9,26 @@
   border: 1px solid;
   width: 550px;
   height: 117px;
-  background-color: #D3DCD2;
-  background-repeat: no-repeat;
-  background-position: 12px 2px;
   -moz-box-shadow:    1px 1px 2px 3px #ccc;
   -webkit-box-shadow: 1px 1px 2px 3px #ccc;
   box-shadow:         1px 1px 2px 3px #ccc;
 }
 
-#minecraft-server-status div.mc-inner-content {
+.minecraft-status-container {
+  background-color: #D3DCD2;
+  background-repeat: no-repeat;
+  background-position: 12px 2px;
+}
+
+.server-online {
+  background-image: url("../images/minecraft-creeper.png");
+}
+
+.server-offline {
+  background-image: url("../images/minecraft-skeleton.png");
+}
+
+.minecraft-status div.mc-inner-content {
   padding: 1em;
   padding-left: 10em;
 }
@@ -49,7 +60,7 @@ div.mc-inner-content {
   background-image: url("../images/minecraft-logo.png");
 }
 
-#minecraft-server-status div.mc-loading {
+.minecraft-status div.mc-loading {
   background-image: url("../images/spinner.gif");
   background-repeat: no-repeat;
 }

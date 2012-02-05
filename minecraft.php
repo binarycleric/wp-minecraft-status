@@ -26,19 +26,17 @@ wp_enqueue_script('minecraft-js',
                   true);
 
 function server_status_callback() {
-  $mc_host="minecraft.pittco.org"; 
-  $mc_port=25565;
+  $mc_host=$_POST['host'];
+  $mc_port=$_POST['port'];
 
   $socket = @fsockopen($mc_host, $mc_port, $num, $error, 2);
 
   if($socket) {
     $color = "green";
     $status = "online";
-    $bg_image = plugins_url("images/minecraft-creeper.png", __FILE__);
   } else {
     $color = "red";
     $status = "offline";
-    $bg_image = plugins_url("images/minecraft-skeleton.png", __FILE__);
   }
 
   @fclose($socket);
